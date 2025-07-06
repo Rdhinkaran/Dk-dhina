@@ -56,4 +56,25 @@ function flipCard() {
 }
 
 
+// Handle Contact Form Submission
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent page reload
+
+    // Get values
+    const name = form.querySelector("input[type='text']").value;
+    const email = form.querySelector("input[type='email']").value;
+    const message = form.querySelector("textarea").value;
+
+    // Temporary success message
+    alert(`✅ Message Sent!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+    // Optional: Reset the form
+    form.reset();
+  });
+});
+
+
 
