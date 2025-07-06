@@ -76,5 +76,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ✅ Custom Form Submission with Success Message
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const response = await fetch("https://formspree.io/f/mqkrqzpq", {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      alert("✅ Message Sent Successfully Boss!");
+      form.reset();
+    } else {
+      alert("❌ Oops! Something went wrong. Try again.");
+    }
+  });
+});
+
 
 
