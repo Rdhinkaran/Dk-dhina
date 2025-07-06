@@ -158,16 +158,17 @@
       
       <!-- Front Side -->
       <div class="flip-card-front">
-        <form>
-          <h2 class="me">Contact Me</h2>
-          <input type="text" placeholder="Name" required><br>
-          <input type="email" placeholder="Email" required><br>
-          <textarea placeholder="Message" required></textarea><br>
-          <div class="but">
-          <button type="submit">Send</button>
-          <button type="button" onclick="flipCard()">🔄 Flip</button>
-          </div>
-        </form>
+        <form action="https://formspree.io/f/mqkrqzpq" method="POST">
+           <h2 class="me">Contact Me</h2>
+            <input type="text" name="name" placeholder="Name" required><br>
+             <input type="email" name="email" placeholder="Email" required><br>
+             <textarea name="message" placeholder="Message" required></textarea><br>
+            <div class="but">
+             <button type="submit">Send</button>
+             <button type="button" onclick="flipCard()">🔄 Flip</button>
+            </div>
+          </form>
+
       </div>
 
       <!-- Back Side -->
